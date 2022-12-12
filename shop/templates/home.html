@@ -18,19 +18,19 @@ height: 75vh;}
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
-            <img src="/media/shop/images/img1.jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-item active" data-bs-interval="2000">
+            <img src="/media/shop/images/head-1.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
             </div>
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-            <img src="/media/shop/images/img2.jpeg" class="d-block w-100" alt="...">
+            <img src="/media/shop/images/head-2.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
 
             </div>
         </div>
         <div class="carousel-item">
-            <img src="/media/shop/images/img3.jpeg" class="d-block w-100" alt="...">
+            <img src="/media/shop/images/head-3.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
 
             </div>
@@ -59,20 +59,20 @@ height: 75vh;}
                     NOW</a>
             </div>
             <div class="col-5">
-                <img src=" /media/shop/images/img1.jpeg">
+                <img src="/media/shop/images/bed.jpg" class="rounded" style="max-height: 400px; max-width:auto;">
             </div>
         </div>
     </div>
 </nav>
 <div
-    style="background-image: url('https://i5.walmartimages.com/asr/83bc8f53-c009-4546-9ceb-47dbd437d2fd_1.e9b7216ce64ccc2903d1503edb9030aa.jpeg');width:auto; height:300px;">
+    style="background-image: url('/media/shop/images/couch-447484.jpg');width:auto; max-height:300px;position:center;">
     {% if user.is_authenticated %}
     <h1 style="font-weight:100;margin:20px 0px 0px 30px;padding:100px 0px 0px 0px;">CHECK
         OUT,<br>OUR NEW ARRIVAL</h1>
     <a type="submit" class="btn btn-primary" style="margin:15px 0px 50px 30px;" href="/newarrival">CLICK HERE</a>
     {% else %}
-    <h1 style="font-weight:100;margin:20px 0px 0px 30px;padding:100px 0px 0px 0px;">Sign in to see order
-        history,<br> pricing and availability.</h1>
+    <h1 style="font-weight:100;margin:20px 0px 0px 30px;padding:100px 0px 0px 0px;"><b>Sign in to see order
+        history,<br> pricing and availability.</b></h1>
     <a type="submit" class="btn btn-primary" style="margin:15px 0px 50px 30px;" href="/login">Sign in</a>
     <a type="submit" class="btn btn-primary" style="margin:15px 0px 50px 30px;" href="/signup">Don't Have An
         Account?</a>
@@ -83,7 +83,7 @@ height: 75vh;}
     <div class="container text-center p-3 m-3">
         <div class="row align-items-center">
             <div class="col-7">
-                <img src="/media/shop/images/img2.jpeg">
+                <img src="/media/shop/images/dini.jpg" class="rounded" style="max-height: 400px; max-width:auto;">
             </div>
 
             <div class="col-5">
@@ -112,21 +112,24 @@ height: 75vh;}
             </div>
 
             <div class="col-5">
-                <img src="/media/shop/images/img3.jpeg">
+                <img src="/media/shop/images/liv.jpg" class="rounded" style="max-height: 400px; max-width:auto;">
             </div>
         </div>
     </div>
 </nav>
 
 <div class="container-fluid" style="padding:35px 35px 35px 35px;">
-    <nav class="nav" style="margin:0px 0px 0px 50px;color:red;">
-        <h1 style="font-weight:100;font-size:35px;">CONNECT WITH US!</h1>
-    </nav>
-    <ul class="nav justify-content-center" style="margin:-45px 0px 10px 0px;">
-        <p>Keep in touch with us via our social platforms on <br>Instagram, Facebook, Pinterest, and YouTube.</p>
-    </ul>
-    <ul class="nav justify-content-end" style="margin:-90px 0px 10px 0px;"><img
-            src="https://th.bing.com/th/id/OIP.ziFvXk81HMqay3arshNAzQHaBe?pid=ImgDet&rs=1"></ul>
+    <div class="row">
+         <ul class="col">
+            <h1 style="font-weight:100;font-size:35px;color:red;">CONNECT WITH US!</h1>
+        </ul>
+        <ul class="col">
+            <p>Keep in touch with us via our social platforms on <br>Instagram, Facebook, Pinterest, and YouTube.</p>
+        </ul>
+        <ul class="col" ><img
+            src="/media/shop/images/socialimg.png" style="max-width:200px;">
+        </ul>
+    </div>        
 </div>
 
 <!--images-->

@@ -39,26 +39,25 @@
 
     <!-- topbar -->
 
-    <nav class="bg-white" style="
-    border-bottom: 1px solid #e5e5e5;">
-        <div class="container mx-3 mt-3" >
+    <header class="bg-white border-bottom">
+        <div class="container mx-1 mt-3" >
             <div class="row">
 
-                <a class="col-1" href="/about" style="text-decoration:none; font-size:9px;color:grey;">ABOUT
+                <a class="col" href="/about" style="text-decoration:none; font-size:9px;color:grey;">ABOUT
                     US</a>
-                <a class="col-1" href="/contact"
+                <a class="col" href="/contact"
                     style="text-decoration:none; font-size:9px;color:grey;">CONTACT US</a>
-                <marquee class="col" direction="left">Welcome to Dream Decor. We love to provide comfort to you. For any support or query contact us @ support@dreamdecor.com</marquee>
+                <marquee class="col-10" direction="left">Welcome to Dream Decor. We love to provide comfort to you. For any support or query contact us at support@dreamdecor.com</marquee>
             </div>
         </div>
-    </nav>
+    </header>
 
 
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg bg-white sticky-top">
-        <div class="container-fluid" style="display: flex;border-bottom: 1px solid #e5e5e5;">
+        <div class="container-fluid">
             <a href="/">
-                <img class="navbar-b" src="/media/shop/images/logo.jpg"></a>
+                <img class="navbar-b" src="/media/shop/images/logo.jpg" style="max-width:200px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -107,7 +106,7 @@
                         {% else %}
                         <li class="nav-item">
                             <a class="nav-link active text-danger" aria-current="page" href="/signup">Become A
-                                Dealer</a>
+                                Client</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/login">Login</a>
@@ -116,10 +115,10 @@
                         <li class="nav-link">
                             {% with total_items=cart|length %}
                             {% if total_items >= 0 %}
-                            <i class="fa fa-shopping-cart" style="font-size:24px;color:rgb(54, 53, 53)">
+                            <a href="/cart_detail" class="fa fa-shopping-cart" style="font-size:24px;color:rgb(54, 53, 53); text-decoration:none;">
                                 <a href="{% url "cart_detail" %}"
                                     style="font-size:12px;text-decoration:none">{{total_items}}</a>
-                            </i>
+                            </a>
                             {% else %}
                             <i class="fa fa-shopping-cart" style="font-size:24px;color:rgb(54, 53, 53)"></i>
                             {% endif %}
@@ -140,20 +139,28 @@
 
     <div style="background-color: #c0bdbd;">
         <div class="row justify-content-start" style="padding:50px 80px 50px 80px;background-color: #c0bdbd;">
-            <div class="col-3">
-                <p style="font-size:13px;">EAST COAST</p>
-                <P style="font-size:13px;">329 Wyckoff Mills Rd<br>East Windsor, NJ 08520</P>
+            <div class="col-sm-3">
+                <p style="font-size:16px;"><b>Springfield</b></p>
+                <p style="font-size:13px;">756 State St, Springfield,</p>
+                <p style="font-size:13px;"> MA 01109</p>
+                <p style="font-size:13px;">(413) 747-0300</p>
             </div>
-            <div class="col-3">
-                <p style="font-size:13px;">WEST COAST</p>
-                <p style="font-size:13px;">11895 Cedar St</p><br>Hesperia, CA 92345</p>
+            <div class="col-sm-3">
+                <p style="font-size:16px;"><b>West Springfield</b></p>
+                <p style="font-size:13px;">120 Memorial Ave, West Springfield,</p>
+                <p style="font-size:13px;"> MA 01089</p>
+                <p style="font-size:13px;">(413) 304-4696</p>
             </div>
-            <div class="col-3">
-                <a style="font-size:13px; text-decoration:none; color:black;" href="/about">About us</a><br>
-                <a style="font-size:13px; text-decoration:none; color:black;" href="/contact">Contact us</a>
+            <div class="col-sm-3">
+                <a class="row" style="font-size:16px; text-decoration:none; color:black;" href="/about">About us</a>
+                <a class="row" style="font-size:16px; text-decoration:none; color:black;" href="/contact">Contact us</a>
+                <a class="row" style="font-size:16px; text-decoration:none; color:black;" href="/tracking">Track Your Orders</a>
             </div>
-            <div class="col-3">
-                <p style="font-size:13px;">Shipping Policy</p>
+            <div class="col-sm-3">
+                <a class="row" style="font-size:16px; text-decoration:none; color:black;" href="/shippingpolicy">Shipping Policy</a>
+                <a class="row" style="font-size:16px; text-decoration:none; color:black;" href="/warranty">Warranty</a>
+                <a class="row" style="font-size:16px; text-decoration:none; color:black;" href="/privacypolicy">Privacy Policy</a>
+                <a class="row" style="font-size:16px; text-decoration:none; color:black;" href="/termsandpolicy">Terms & Policy</a>
             </div>
         </div>
     </div>

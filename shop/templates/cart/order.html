@@ -16,6 +16,7 @@
                     <th scope="col">Tracking no</th>
                     <th scope="col">Views</th>
                     <th scope="col">Track order</th>
+                    <th scope="col">Invoice</th>
                 </tr>
             </thead>
             <tbody>
@@ -47,12 +48,15 @@
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <p>Message: {{i.message}}</p>
+                                        <p><b>Message:</b> {{i.message}}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </td>
+                    <td><a class="btn btn-primary" href="{% url 'generateinvoice' i.id%}">
+                        Download
+                    </a></td>
                 </tr>
              
                 {%endfor%}

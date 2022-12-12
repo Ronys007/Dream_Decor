@@ -5,9 +5,8 @@ from email.policy import default
 from enum import unique
 from unicodedata import category, name
 from django.db import models
-import datetime
 from django.contrib.auth.models import User
-
+import datetime
 # Create your models here.
 
 
@@ -55,7 +54,6 @@ class Order(models.Model):
     tracking_no= models.CharField(max_length=150, null= True)
     created_at= models.DateTimeField(auto_now_add=True)
     updated_at= models.DateTimeField(auto_now=True)
-    
 
     def __str__(self):
         return '{}-{}'.format(self.id, self.tracking_no)
@@ -80,11 +78,11 @@ class OrderItem(models.Model):
 class ContactForm(models.Model):
     user=  models.ForeignKey(User,
                                   on_delete=models.CASCADE, null= True, unique=False)
-    name= models.CharField(max_length=150, null= True, default='')
-    phone= models.CharField(max_length=12, null= True, default= 1)
-    email= models.EmailField(null= True)
-    subject= models.CharField(max_length=50, null= True, default='')
-    message= models.CharField(max_length=1000, null= True, default='')
+    name= models.CharField(max_length=150, null= False, default='')
+    phone= models.CharField(max_length=12, null= False, default= 1)
+    email= models.EmailField(null= False, default= '')
+    subject= models.CharField(max_length=50, null= False, default='')
+    message= models.CharField(max_length=1000, null= False, default='')
     
     def __str__(self):
         return self.name
